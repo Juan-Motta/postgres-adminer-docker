@@ -3,6 +3,8 @@ services:
  
   postgres:
     image: postgres:14
+    volumes:
+      - /config:/var/lib/postgresql
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     environment:
